@@ -18,6 +18,9 @@ wget http://web.eecs.umich.edu/~mehrzads/SLmake.inc
 make
 cd ..
 git clone https://github.com/mehrzads/gemm.git
+cd gemm/scalapack
+make
+sh test sh
 # $Id: $
 
 
