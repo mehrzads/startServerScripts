@@ -1,8 +1,7 @@
 #!/bin/bash
 starcluster start largecluster
-starcluster sshmaster largecluster 'bash -s' < local_script.sh
-starcluster get largecluster /home/sgeadmin/gemm/scalapack/result.txt .
-
+starcluster sshmaster largecluster 'bash -s' < master_script.sh  
+starcluster sshnode largecluster node001 'bash -s' < node_script.sh 
 # $Id: $
 
 
