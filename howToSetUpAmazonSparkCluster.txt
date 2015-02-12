@@ -1,0 +1,5 @@
+ec2/spark-ec2 -k freeKey -i ~/freeKey.pem -s 2 launch sparkCluster
+ec2/spark-ec2 -k freeKey -i ~/freeKey.pem login sparkCluster
+cat /root/spark-ec2/cluster-url 
+./bin/spark-submit    --master spark://ec2-52-1-184-141.compute-1.amazonaws.com:7077    examples/src/main/python/pi.py 1000
+ec2/spark-ec2 destroy sparkCluster
